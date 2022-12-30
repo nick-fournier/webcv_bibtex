@@ -5,8 +5,12 @@ import {
   // FlagIcon,
   MapIcon,
   OfficeBuildingIcon,
-  SparklesIcon,
+  SparklesIcon
 } from '@heroicons/react/outline';
+
+import Cite from 'citation-js';
+
+import publicationsFile from '!!raw-loader!./publications.bib';
 
 import GithubIcon from '../components/Icon/GithubIcon';
 // import InstagramIcon from '../components/Icon/InstagramIcon';
@@ -15,6 +19,8 @@ import LinkedInIcon from '../components/Icon/LinkedInIcon';
 // import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.webp';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
+import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
+import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
 import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
@@ -23,12 +29,12 @@ import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
 import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
 import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
 import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
-import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
-import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
+
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import {
   About,
+  BibItem,
   ContactSection,
   ContactType,
   Hero,
@@ -42,11 +48,43 @@ import {
 } from './dataDef';
 
 /**
+ * BibliographyItem
+ */
+
+const publicationData = Cite(publicationsFile, ['-i']);
+
+export const publications: BibItem[] = [];
+
+Object.keys(publicationData.data).forEach((key, index) => {
+  const citation = Cite(publicationData.data[key]);
+  // console.log(citation);
+
+  let doi: string = citation.data[0].DOI;
+  // const html_string = '';
+  
+  const html_string: string = citation.format('bibliography', {
+    format: 'html',
+    template: 'apa',
+    lang: 'en-US',
+  });
+
+  if (citation.data[0].DOI != undefined) {
+    doi = 'https://doi.org/' + doi;
+  }
+  // console.log(html_string);
+
+  publications[index] = {
+    doi_url: doi,
+    content: html_string,
+  };
+});
+
+/**
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: "Nick's CV",
+  description: "Nick Fournier's Curriculum Vitae, and more!",
 };
 
 /**

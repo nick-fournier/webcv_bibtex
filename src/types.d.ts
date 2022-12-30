@@ -3,8 +3,9 @@
 declare module 'citation-js' {
   export = Cite;
 }
+
 declare module 'react-html-parser' {
-  import { ReactElement } from 'react';
+  import {ReactElement} from 'react';
 
   interface Node {
     type: string;

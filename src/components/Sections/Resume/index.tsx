@@ -1,7 +1,8 @@
 import {FC, memo} from 'react';
 
-import {awards, education, experience, SectionId, skills} from '../../../data/data';
+import {awards, education, experience, publications, SectionId, skills} from '../../../data/data';
 import Section from '../../Layout/Section';
+import Bibliography from './Bibliography';
 import Education from './Education';
 import ResumeSection from './ResumeSection';
 import {SkillGroup} from './Skills';
@@ -34,6 +35,13 @@ const Resume: FC = memo(() => {
             <TimelineItem item={item} key={`${item.title}-${index}`} />
           ))}
         </ResumeSection>
+
+        <ResumeSection title="Select Publications">
+          {publications.map((item, index) => (
+            <Bibliography item={item} key={`${item.doi_url}-${index}`} />
+          ))}
+        </ResumeSection>
+
         <ResumeSection title="Skills">
           <p className="pb-8">Here you can show a snapshot of your skills to show off to employers</p>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">

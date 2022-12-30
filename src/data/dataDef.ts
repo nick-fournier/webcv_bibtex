@@ -18,6 +18,15 @@ export interface HomepageMeta {
 }
 
 /**
+ * BibliographyItem items
+ */
+export interface BibItem {
+  doi_url: string;
+  // url: string;
+  content: string;
+}
+
+/**
  * Hero section
  */
 export interface Hero {
