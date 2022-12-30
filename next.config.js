@@ -21,10 +21,10 @@ const nextConfig = {
   pageExtensions: ['tsx', 'mdx', 'ts'],
   poweredByHeader: false,
   productionBrowserSourceMaps: false,
-  svgo: {
-    multipass: true,
-    plugins: ['removeDimensions'],
-  },
+  // svgo: {
+  //   multipass: true,
+  //   plugins: ['removeDimensions'],
+  // },
   reactStrictMode: true,
   experimental: {
     newNextLinkBehavior: false,
