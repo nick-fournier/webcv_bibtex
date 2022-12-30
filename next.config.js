@@ -25,6 +25,10 @@ const nextConfig = {
     multipass: true,
     plugins: ['removeDimensions'],
   },
+  reactStrictMode: true,
+  experimental: {
+    newNextLinkBehavior: false,
+  },
   strictMode: true,
   swcMinify: true,
   trailingSlash: false,
