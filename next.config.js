@@ -29,7 +29,7 @@ const nextConfig = {
   experimental: {
     newNextLinkBehavior: false,
   },
-  strictMode: true,
+  // strictMode: true,
   swcMinify: true,
   trailingSlash: false,
   images: {
@@ -38,7 +38,7 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
-// module.exports = {
-//   assetPrefix: isProd ? './' : undefined,
-//   // assetPrefix: isProd ? 'https://cdn.mydomain.com' : undefined,
-// }
+module.exports = {
+  assetPrefix: isProd ? './' : undefined,
+  // assetPrefix: isProd ? 'https://cdn.mydomain.com' : undefined,
+}

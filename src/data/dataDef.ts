@@ -22,7 +22,6 @@ export interface HomepageMeta {
  */
 export interface BibItem {
   doi_url: string;
-  // url: string;
   content: string;
 }
 

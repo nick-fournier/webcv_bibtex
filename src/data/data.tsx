@@ -29,7 +29,6 @@ import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
 import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
 import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
 import profilepic from '../images/profilepic.jpg';
-import testimonialImage from '../images/testimonial.webp';
 import {
   About,
   BibItem,
@@ -40,7 +39,6 @@ import {
   PortfolioItem,
   SkillGroup,
   Social,
-  TestimonialSection,
   TimelineItem,
   TimelineSubItem
 } from './dataDef';
@@ -55,12 +53,11 @@ export const publications: BibItem[] = [];
 
 Object.keys(publicationData.data).forEach((key, index) => {
   const citation = Cite(publicationData.data[key]);
-  // console.log(citation);
 
   let doi: string = citation.data[0].DOI;
-  // const html_string = '';
+  // const html_string = 'blah';
   
-  const html_string: string = citation.format('bibliography', {
+  const html_string = citation.format('bibliography', {
     format: 'html',
     template: 'apa',
     lang: 'en-US',
@@ -69,8 +66,14 @@ Object.keys(publicationData.data).forEach((key, index) => {
   if (citation.data[0].DOI != undefined) {
     doi = 'https://doi.org/' + doi;
   }
+  // console.log(doi);
+  // console.log(citation);
   // console.log(html_string);
 
+  // publications[index] = {
+  //   doi_url: doi,
+  //   content: html_string,
+  // };
   publications[index] = {
     doi_url: doi,
     content: html_string,
@@ -344,7 +347,7 @@ export const awards: TimelineItem[] = [
   {
     date: '2015-2018',
     location: '',
-    title: 'Dwight D. Eisenhower Transportation Fellowship',
+    title: 'Dwight D. Eisenhower Fellowship',
   },
   {
     date: '2016-2017',
@@ -464,30 +467,6 @@ export const experience: TimelineItem[] = [
     // ),
   },
 ];
-
-/**
- * Testimonial section
- */
-export const testimonial: TestimonialSection = {
-  imageSrc: testimonialImage,
-  testimonials: [
-    {
-      name: 'John Doe',
-      text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
-    },
-    {
-      name: 'Jane Doe',
-      text: 'Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details (notes about a project you were on together, impressive quality produced, etc).',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
-    },
-    {
-      name: 'Someone else',
-      text: 'Add several of these, and keep them as fresh as possible, but be sure to focus on quality testimonials with strong highlights of your skills/work ethic.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
-    },
-  ],
-};
 
 /**
  * Contact section

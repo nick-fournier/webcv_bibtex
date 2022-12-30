@@ -8,6 +8,7 @@ const Bibliography: FC<{item: BibItem}> = memo(({item}) => {
 
   return (
     <div className="flex flex-col pb-8 text-center last:pb-0 md:text-left">
+      {/* {content} */}
       {/* <a href={doi_url}>{content}</a> */}
       <a href={doi_url}>{parse(content)}</a>
     </div>
