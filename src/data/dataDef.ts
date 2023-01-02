@@ -18,12 +18,13 @@ export interface HomepageMeta {
 }
 
 /**
- * BibliographyItem items
+ * Bibliography
  */
-export interface BibItem {
-  doi_url: string;
-  content: string;
-}
+
+// export interface BibItem {
+//   doi_url?: string;
+//   content: JSX.Element | string;
+// }
 
 /**
  * Hero section

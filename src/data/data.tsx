@@ -1,3 +1,6 @@
+/**
+ * BibliographyItem
+ */
 import {
   AcademicCapIcon,
   // CalendarIcon,
@@ -7,15 +10,9 @@ import {
   OfficeBuildingIcon,
   SparklesIcon
 } from '@heroicons/react/outline';
-import Cite from 'citation-js';
-
-import publicationsFile from '!!raw-loader!./publications.bib';
 
 import GithubIcon from '../components/Icon/GithubIcon';
-// import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-// import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
-// import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.webp';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
@@ -29,9 +26,22 @@ import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
 import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
 import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
 import profilepic from '../images/profilepic.jpg';
+// const publicationData = Cite(publicationsFile, ['-i']);
+// const publicationData = Cite.input(publicationsFile);
+// const cite = Cite(publicationData);
+// console.log(publicationData)
+// export const publications = '';
+// export const publications = new Cite(publicationsFile).format(
+//     'bibliography', {
+//       format: 'html',
+//       template: 'apa',
+//       lang: 'en-US',
+//       nosort: true,
+//     }
+//   );
+import data from './data.preval';
 import {
   About,
-  BibItem,
   ContactSection,
   ContactType,
   Hero,
@@ -43,42 +53,7 @@ import {
   TimelineSubItem
 } from './dataDef';
 
-/**
- * BibliographyItem
- */
-
-const publicationData = Cite(publicationsFile, ['-i']);
-
-export const publications: BibItem[] = [];
-
-Object.keys(publicationData.data).forEach((key, index) => {
-  const citation = Cite(publicationData.data[key]);
-
-  let doi: string = citation.data[0].DOI;
-  // const html_string = 'blah';
-  
-  const html_string = citation.format('bibliography', {
-    format: 'html',
-    template: 'apa',
-    lang: 'en-US',
-  });
-
-  if (citation.data[0].DOI != undefined) {
-    doi = 'https://doi.org/' + doi;
-  }
-  // console.log(doi);
-  // console.log(citation);
-  // console.log(html_string);
-
-  // publications[index] = {
-  //   doi_url: doi,
-  //   content: html_string,
-  // };
-  publications[index] = {
-    doi_url: doi,
-    content: html_string,
-  };
-});
+export const publications = data;
 
 /**
  * Page meta data
@@ -144,7 +119,6 @@ export const aboutData: About = {
   I have a PhD in transportation engineering, a masters in regional planning, and am passionate about all things transportation in my personal life.
   
   I currently work as a travel modeling consultant, which is a fancy way of saying data scientist and python engineer for travel demand simulation models. I also moonlight as an academic, publishing papers when I can find the time.
-
   `,
   aboutItems: [
     {label: 'Location', text: 'San Francisco Bay Area, California', Icon: MapIcon},
@@ -382,7 +356,7 @@ export const experience: TimelineItem[] = [
         title: 'Exploring the operational and equity benefits of a pre-pay dynamic tolling system [lead researcher]',
         content: (
           <p>
-            R-based simulation exploring revenue and traffic flow with “futures” market toll pricing. Utilized Kernel
+            Analytical simulation exploring revenue and traffic flow with “futures” market toll pricing. Utilized Kernel
             Density Estimation to smooth traffic flow data for forecasting and pricing models. Funded by California
             State SB1.
           </p>

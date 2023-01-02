@@ -13,7 +13,7 @@ const Resume: FC = memo(() => {
     <Section className="bg-neutral-100" sectionId={SectionId.Resume}>
       <div className="flex flex-col divide-y-2 divide-neutral-300">
 
-        <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-0 md:grid-cols-2">
           <span className="flex-1 text-sm sm:flex-none">
             <ResumeSection title="Education">
               {education.map((item, index) => (
@@ -37,9 +37,7 @@ const Resume: FC = memo(() => {
         </ResumeSection>
 
         <ResumeSection title="Select Publications">
-          {publications.map((item, index) => (
-            <Bibliography item={item} key={`${item.doi_url}-${index}`} />
-          ))}
+          <Bibliography item={publications}/>
         </ResumeSection>
 
         <ResumeSection title="Skills">

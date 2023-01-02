@@ -1,7 +1,27 @@
 // Modules
 
-declare module 'citation-js' {
-  export = Cite;
+declare module 'citation-js' {  
+  // import Cite from '@citation-js/plugin-bibtex'
+
+   class Cite {
+    constructor(
+      data: string | object,
+      options?: object,
+      );
+
+    format(
+      format: string,
+      options?: object
+      ): string;
+  }
+  export default Cite;
+}
+
+// declare module 'citation-js';
+
+declare module '!!raw-loader!*' {
+  const contents: string
+  export = contents
 }
 
 declare module '*.bib' {
