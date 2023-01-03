@@ -37,7 +37,7 @@ const nextConfig = {
     newNextLinkBehavior: false,
   },
   // strictMode: true,
-  assetPrefix: isProd ? '.' : undefined,
+  // assetPrefix: isProd ? '.' : undefined,
   swcMinify: true,
   trailingSlash: false,
   images: {

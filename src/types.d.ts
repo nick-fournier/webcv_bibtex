@@ -19,11 +19,6 @@ declare module 'citation-js' {
 
 // declare module 'citation-js';
 
-declare module '!!raw-loader!*' {
-  const contents: string
-  export = contents
-}
-
 declare module '*.bib' {
   const content: string;
   export default content;
