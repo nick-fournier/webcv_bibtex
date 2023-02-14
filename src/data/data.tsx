@@ -98,13 +98,13 @@ export const heroData: Hero = {
 export const aboutData: About = {
   profileImageSrc: profilepic,
   description: ` 
-  I currently work as a travel modeling consultant, which is a fancy way of saying python developer and transportation data scientist. I develop and implement large-scale simulation models of regional transportation systems. I also moonlight as an academic, publishing papers when I can find the time.
+  I currently work as a travel modeling consultant, which is a fancy way of saying python engineer and data scientist for transportation data. I develop and implement large-scale simulation models of regional transportation systems. I also moonlight as an academic, publishing papers when I can find the time.
   `,
   aboutItems: [
     {label: 'Location', text: 'San Francisco Bay Area, California', Icon: MapIcon},
     {
       label: 'Research Interests',
-      text: 'Travel modeling, continuum approximation, transportation economics, bicycle mobility, data science, optimization',
+      text: 'Data science, machine learning, optimization, transportation economics, simulation modeling, bicycle mobility',
       Icon: SparklesIcon,
     },
     {label: 'Study', text: 'University of Massachusetts Amherst', Icon: AcademicCapIcon},
@@ -128,36 +128,40 @@ export const skills: SkillGroup[] = [
         level: 9,
       },
       {
-        name: 'Typescript',
-        level: 4,
-      },
-      {
         name: 'SQL/Postgres',
         level: 5,
       },
-    ],
-  },
-  {
-    name: 'Tools / Framework',
-    skills: [
       {
-        name: 'Django',
-        level: 8,
+        name: 'C++',
+        level: 1,
       },
       {
-        name: 'scikit-learn',
-        level: 7,
-      },
-      {
-        name: 'pandas',
-        level: 9,
-      },
-      {
-        name: 'seaborn',
-        level: 6,
+        name: 'Typescript',
+        level: 1,
       },
     ],
   },
+  // {
+  //   name: 'Tools / Framework',
+  //   skills: [
+  //     {
+  //       name: 'Django',
+  //       level: 8,
+  //     },
+  //     {
+  //       name: 'scikit-learn',
+  //       level: 7,
+  //     },
+  //     {
+  //       name: 'pandas / data.table',
+  //       level: 9,
+  //     },
+  //     {
+  //       name: 'seaborn / ggplot',
+  //       level: 6,
+  //     },
+  //   ],
+  // },
 ];
 
 /**
@@ -262,11 +266,11 @@ export const experience: TimelineItem[] = [
     content: [
       {
         title: 'ActivitySim',
-        content: <p> Development and implementation of an open source activity-based travel model <a href='https://activitysim.github.io/'><strong>ActivitySim</strong></a>. Notable implementations for San Diego and Dubai. Created a cross-border model (Mexico to San Diego) and developed a disaggregated accessibility measure estimator, linking higher level models to lower level choice models.</p>,
+        content: <p> Development and implementation of an open source activity-based travel model <a href='https://activitysim.github.io/'><em>ActivitySim</em></a>. Notable implementations for San Diego and Dubai. Created a visitor model and developed a disaggregated accessibility measure estimator, linking higher level models to lower level choice models.</p>,
       },
       {
-        title: 'Household Travel Survey data processing and reweighting',
-        content: <p>Reweighted survey data to expected Census targets using R for imputation and extrapolation, and PopulationSim for weight estimation.</p>,
+        title: 'Household Travel Survey data processing pipeline',
+        content: <p> Design of data processing pipeline to fuse form-based and smartphone-based travel survey data, impute missing values, adjust for bias, and reweighted to the target region's population using <a href='https://github.com/ActivitySim/populationsim'><em>PopulationSim</em></a>. Pipeline includes Postgres, R, Python, and visualization in Rmarkdown generated HTML flex dashboard. </p>,
       },
     ],
   },
@@ -348,6 +352,22 @@ export const experience: TimelineItem[] = [
           </p>
         ),
       },
+      {
+        title: 'Infrastructure Strategies for Safer Cycling: An evaluation of driver behavior in a driving simulator',
+        content: (
+          <p>
+            Utilized a driving simulator to test driver response to novel infrastructure treatments, such as bicycle infrastructure and dynamic signage for the visually impaired. <a href='http://www.ecs.umass.edu/hpl/?_gl=1*1ccbd5e*_ga*MTIxNzE2Mzk0NC4xNjcxNjQxMTk3*_ga_21RLS0L7EB*MTY3NjQxMjg2OC4xLjEuMTY3NjQxMjk2MS4wLjAuMA..&_ga=2.137926008.955228350.1676412868-1217163944.1671641197'><em>The driving simulator</em></a> is a full sized vehicle with its engine removed, fitted with sensors to all user inputs and responses (eye tracking, pedals, steering wheel, shifter, radio, etc.) and surrounded by projector screens for an immersive user experience. Sponsored by the U.S. DOT SaferSim UTC.
+          </p>
+        ),
+      },
+      {
+        title: 'Bicycle Infrastructure and Safety Research',
+        content: (
+          <a>
+          Developed a sinusoidal model for seasonal bicycle demand estimation for calculating bicycle-vehicle crash risk where bicycle traffic data are limited. 
+          </a>
+        ),
+      }
     ],
   },
   {
