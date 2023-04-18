@@ -14,8 +14,8 @@ import {
 import GithubIcon from '../components/Icon/GithubIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import heroImage from '../images/header-background.webp';
-import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
-import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
+import portfolioCoursesImage from '../images/portfolio/courses_screenshot.png';
+import portfolioOptimizerImage from '../images/portfolio/portfolio_screenshot.png';
 import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
 import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
 import profilepic from '../images/profilepic.jpg';
@@ -52,6 +52,7 @@ export const SectionId = {
   Contact: 'contact',
   Portfolio: 'portfolio',
   Resume: 'resume',
+  Publications: 'publications',
   Skills: 'skills',
   Stats: 'stats',
   Testimonials: 'testimonials',
@@ -104,7 +105,7 @@ export const aboutData: About = {
     {label: 'Location', text: 'San Francisco Bay Area, California', Icon: MapIcon},
     {
       label: 'Research Interests',
-      text: 'Data science, machine learning, optimization, transportation economics, simulation modeling, bicycle mobility',
+      text: 'Data science, machine learning, optimization, transportation economics, simulation modeling, urban planning',
       Icon: SparklesIcon,
     },
     {label: 'Study', text: 'University of Massachusetts Amherst', Icon: AcademicCapIcon},
@@ -170,35 +171,28 @@ export const skills: SkillGroup[] = [
 export const portfolioItems: PortfolioItem[] = [
   {
     title: 'Portfolio Optimizer',
-    description: 'My personal attempt as creating a stock filter and expected return optimizer. ',
-    // 'An enhancement of Piotroski\'s famous F-score system, but instead of discrete points it uses the relevant criteria to make autorefressive timeseries predictions of expected returns. The portfolio is then optimized using mean variance optimization with an objective of minimizing volatility.',
-    url: '',
-    image: porfolioImage2,
+    description: 'My personal attempt as creating a stock filter and porfoltio optimizer. ',
+    url: 'https://apps.nicholasfournier.com/portfolio-optimizer',
+    image: portfolioOptimizerImage,
   },
   {
     title: 'Course Maps for South Beach Yacht Club\'s Friday Night Series',
-    description: 'I was tired of struggling to read the written directions while on the water',
-    url: 'https://timbaker.me',
-    image: porfolioImage4,
+    description: 'I was tired of struggling to read the thrice photocopied directions while on the water',
+    url: 'https://apps.nicholasfournier.com/fns/',
+    image: portfolioCoursesImage,
   },
-  {
-    title: 'Parsimobius',
-    description: 'A zoneless travel demand model. Uses principles of image compression and multivariate interpolation to utilize pure continuous XY coordinates rather than clunky zones',
-    url: 'https://timbaker.me',
-    image: porfolioImage10,
-  },
-  {
-    title: 'Project title 8',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage8,
-  },
-  {
-    title: 'Project title 10',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage10,
-  },
+  // {
+  //   title: 'Parsimobius',
+  //   description: 'A zoneless travel demand model. Uses principles of image compression and multivariate interpolation to utilize pure continuous XY coordinates rather than clunky zones',
+  //   url: 'https://timbaker.me',
+  //   image: porfolioImage10,
+  // },
+  // {
+  //   title: 'Speed Cam',
+  //   description: 'Me being an annoying neighbor and monitoring local traffic speeds.',
+  //   url: 'https://timbaker.me',
+  //   image: porfolioImage8,
+  // },
 ];
 
 /**
