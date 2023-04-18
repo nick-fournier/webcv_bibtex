@@ -40,7 +40,7 @@ export const publications = data;
  */
 export const homePageMeta: HomepageMeta = {
   title: "Nick's CV",
-  description: "Nick Fournier's Curriculum Vitae, and more!",
+  description: "Nicholas Fournier's Curriculum Vitae, and more!",
 };
 
 /**
@@ -69,7 +69,7 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        <strong className="text-stone-100">Engineer, planner, and transportist.</strong>
+        <strong className="text-stone-100">Thinker and Tinkerer.</strong>
       </p>
       <div className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         <p>
