@@ -1,12 +1,11 @@
 import {FC, memo} from 'react';
 
-import {awards, education, experience, publications, SectionId, skills} from '../../../data/data';
+import {awards, education, experience, SectionId, skills} from '../../../data/data';
 import Section from '../../Layout/Section';
-import Bibliography from './Bibliography';
+import TimelineItem from '../Timeline';
 import Education from './Education';
 import ResumeSection from './ResumeSection';
 import {SkillGroup} from './Skills';
-import TimelineItem from './Timeline';
 
 const Resume: FC = memo(() => {
   return (
@@ -35,13 +34,6 @@ const Resume: FC = memo(() => {
             <TimelineItem item={item} key={`${item.title}-${index}`} />
           ))}
         </ResumeSection>
-      </div>
-
-      {/* <Section sectionId={SectionId.Publications}> */}
-        <ResumeSection title="Select Publications">
-          <Bibliography item={publications}/>
-        </ResumeSection>
-      {/* </Section> */}
 
         <ResumeSection title="Skills">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -50,7 +42,7 @@ const Resume: FC = memo(() => {
             ))}
           </div>
         </ResumeSection>
-      {/* </div> */}
+      </div>
     </Section>
   );
 });

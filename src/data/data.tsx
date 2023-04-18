@@ -136,33 +136,29 @@ export const skills: SkillGroup[] = [
         name: 'C++',
         level: 1,
       },
+    ],
+  },
+  {
+    name: 'Tools / Framework',
+    skills: [
       {
-        name: 'Typescript',
-        level: 1,
+        name: 'Django',
+        level: 8,
+      },
+      {
+        name: 'scikit-learn',
+        level: 7,
+      },
+      {
+        name: 'pandas / data.table',
+        level: 9,
+      },
+      {
+        name: 'seaborn / ggplot',
+        level: 8,
       },
     ],
   },
-  // {
-  //   name: 'Tools / Framework',
-  //   skills: [
-  //     {
-  //       name: 'Django',
-  //       level: 8,
-  //     },
-  //     {
-  //       name: 'scikit-learn',
-  //       level: 7,
-  //     },
-  //     {
-  //       name: 'pandas / data.table',
-  //       level: 9,
-  //     },
-  //     {
-  //       name: 'seaborn / ggplot',
-  //       level: 6,
-  //     },
-  //   ],
-  // },
 ];
 
 /**
