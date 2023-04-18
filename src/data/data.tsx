@@ -16,8 +16,8 @@ import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import heroImage from '../images/header-background.webp';
 import portfolioCoursesImage from '../images/portfolio/courses_screenshot.png';
 import portfolioOptimizerImage from '../images/portfolio/portfolio_screenshot.png';
-import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
-import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
+// import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
+// import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
 import profilepic from '../images/profilepic.jpg';
 import data from './data.preval';
 import {
