@@ -14,6 +14,7 @@ import {
 import GithubIcon from '../components/Icon/GithubIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import heroImage from '../images/header-background.webp';
+import portfolioBVIImage from '../images/portfolio/bvi_screenshot.png';
 import portfolioCoursesImage from '../images/portfolio/courses_screenshot.png';
 import portfolioOptimizerImage from '../images/portfolio/portfolio_screenshot.png';
 // import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
@@ -99,7 +100,7 @@ export const heroData: Hero = {
 export const aboutData: About = {
   profileImageSrc: profilepic,
   description: ` 
-  I currently work as a travel modeling consultant, which is a fancy way of saying python engineer and data scientist for transportation data. I develop and implement large-scale simulation models of regional transportation systems. I also moonlight as an academic, publishing papers when I can find the time.
+  I currently work as a travel modeling consultant, which is a fancy way of saying python software engineer and data scientist for transportation. I develop and implement large-scale simulation models of regional transportation systems.
   `,
   aboutItems: [
     {label: 'Location', text: 'San Francisco Bay Area, California', Icon: MapIcon},
@@ -139,7 +140,7 @@ export const skills: SkillGroup[] = [
     ],
   },
   {
-    name: 'Tools / Framework',
+    name: 'Tools / Frameworks',
     skills: [
       {
         name: 'Django',
@@ -176,6 +177,12 @@ export const portfolioItems: PortfolioItem[] = [
     description: 'I was tired of struggling to read the thrice photocopied directions while on the water',
     url: 'https://apps.nicholasfournier.com/fns/',
     image: portfolioCoursesImage,
+  },
+  {
+    title: 'BVI Sailing Itinerary',
+    description: 'An interactive sailing itinerary for the British Virgin Islands',
+    url: 'https://apps.nicholasfournier.com/bvi-itinerary/',
+    image: portfolioBVIImage,
   },
   // {
   //   title: 'Parsimobius',
