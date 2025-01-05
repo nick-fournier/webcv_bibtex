@@ -101,17 +101,16 @@ export const heroData: Hero = {
 export const aboutData: About = {
   profileImageSrc: profilepic,
   description: ` 
-  I am currently a data scientist and engineer, working in the transportation space.
-  I have an insatiable curiosity and have no fear taking on projects well outside my domain.
+  I am a data scientist and engineer working in the transportation space. I have an insatiable curiosity and have no fear taking on projects well outside my domain.
   `,
   aboutItems: [
     {label: 'Location', text: 'San Francisco Bay Area, California', Icon: MapIcon},
     {
       label: 'Research Interests',
-      text: 'Data science, machine learning, optimization, transportation economics, simulation modeling, urban planning',
+      text: 'Data science, machine learning, optimization, transportation economics, simulation modeling, urban planning, computer science',
       Icon: SparklesIcon,
     },
-    {label: 'Study', text: 'University of Massachusetts Amherst', Icon: AcademicCapIcon},
+    {label: 'Education', text: 'University of Massachusetts Amherst, UC Berkeley, Monash University', Icon: AcademicCapIcon},
     {label: 'Employment', text: 'Resource System Group, inc.', Icon: OfficeBuildingIcon},
   ],
 };
@@ -121,47 +120,75 @@ export const aboutData: About = {
  */
 export const skills: SkillGroup[] = [
   {
-    name: 'Programming languages',
+    name: 'Data Science',
     skills: [
       {
-        name: 'Python',
+        name: 'Python, R, Pandas, Polars, DuckDB, data.table',
         level: 9,
       },
       {
-        name: 'R',
-        level: 9,
-      },
-      {
-        name: 'SQL/Postgres',
-        level: 5,
-      },
-      {
-        name: 'C++',
+        name: 'optimization, econometrics, statistics',
         level: 1,
       },
     ],
   },
   {
-    name: 'Tools / Frameworks',
+    name: 'Geospatial',
     skills: [
       {
-        name: 'Django',
-        level: 8,
-      },
-      {
-        name: 'scikit-learn',
-        level: 7,
-      },
-      {
-        name: 'pandas / data.table',
-        level: 9,
-      },
-      {
-        name: 'seaborn / ggplot',
+        name: 'PostGIS, GeoPandas, Shapely, QGIS/ArcGIS',
         level: 8,
       },
     ],
   },
+  {
+    name: 'Visualization',
+    skills: [
+      {
+        name: 'Jupyter, RMarkdown, Quarto, Shiny',
+        level: 9,
+      },
+      {
+        name: 'Seaborn, Matplotlib, ggplot2',
+        level: 9,
+      },
+    ],
+  },
+  {
+    name: 'Cloud / DevOps',
+    skills: [
+      {
+        name: 'AWS, Azure, GitHub Actions, DockerHub',
+        level: 7,
+      },
+    ],
+  },
+  {
+    name: 'Data engineering',
+    skills: [
+      {
+        name: 'Docker, Kubernetes, Dagster, Django',
+        level: 8,
+      },
+      {
+        name: 'PostgreSQL, SQLite, MySQL, parquet, hdf5',
+        level: 8,
+      }
+    ],
+  },
+  {
+    name: 'Code Hygiene',
+    skills: [
+      {
+        name: 'Git, GitHub, CI/CD, Ruff linting, typehinting',
+        level: 9,
+      },
+      {
+        name: 'Python Enums, Sphinx, Pandera, Pydantic, PyTest',
+        level: 8,
+      }
+    ],
+  }
 ];
 
 /**
@@ -261,15 +288,19 @@ export const experience: TimelineItem[] = [
   {
     date: '2022 - Present',
     location: 'Resource Systems Group, inc.',
-    title: 'Consultant',
+    title: 'Data Scientist',
     content: [
       {
-        title: 'ActivitySim',
-        content: <p> Development and implementation of an open source activity-based travel model <a href='https://activitysim.github.io/'><em>ActivitySim</em></a>. Notable implementations for San Diego and Dubai. Created a visitor model and developed a disaggregated accessibility measure estimator, linking higher level models to lower level choice models.</p>,
+        title: 'Statistical weighting & imputation',
+        content: <p> Refactor of core travel data pipeline (statistical weighting). Reduced project-level of effort from weeks to hours. Eliminated bottleneck with configurable pipeline allowing analyst level staff to operate. Reduced risk by implementing automation, CI/CD testing, linting, and QAQC reporting and validation. </p>,
       },
       {
-        title: 'Household Travel Survey data processing pipeline',
-        content: <p> Design of data processing pipeline to fuse form-based and smartphone-based travel survey data, impute missing values, adjust for bias, and reweighted to the target region's population using <a href='https://github.com/ActivitySim/populationsim'><em>PopulationSim</em></a>. Pipeline includes Postgres, R, Python, and visualization in Rmarkdown generated HTML flex dashboard. </p>,
+        title: 'Routing & map-matching python API',
+        content: <p>Wrote high-performance python API for concurrent requests for self-hosted routing machine (OSRM) for bulk routing and map-matching of GPS traces.</p>,
+      },
+      {
+        title: 'ActivitySim',
+        content: <p> Contributed core model to open source activity-based travel model <a href='https://activitysim.github.io/'><em>ActivitySim</em></a> for a disaggregated accessibility measure estimator, linking higher level models to lower level choice models.</p>,
       },
     ],
   },
@@ -282,9 +313,7 @@ export const experience: TimelineItem[] = [
         title: 'Exploring the operational and equity benefits of a pre-pay dynamic tolling system [lead researcher]',
         content: (
           <p>
-            Analytical simulation exploring revenue and traffic flow with “futures” market toll pricing. Utilized Kernel
-            Density Estimation to smooth traffic flow data for forecasting and pricing models. Funded by California
-            State SB1.
+            Developed toll pricing “futures” market model using bi-parabolic macroscopic traffic flow model and price elasticities to optimize traffic flow. Funded by California State SB1.
           </p>
         ),
       },
@@ -292,7 +321,7 @@ export const experience: TimelineItem[] = [
         title: 'Bicycle network connectivity evaluation methodology [lead researcher]',
         content: (
           <p>
-            Ongoing research to develop generalized bicycle network connectivity performance measure using graph theory, open-data, and user preference criteria (e.g., route choice models). Funded by Caltrans.
+            Developed graph theory-based bicycle network connectivity performance measure. Funded by Caltrans.
           </p>
         ),
       },
@@ -300,9 +329,7 @@ export const experience: TimelineItem[] = [
         title: 'Erroneous High Occupancy Vehicle (HOV) Degradation',
         content: (
           <p>
-            Python program to detect operational but mislabeled traffic sensors using variety of machine learning techniques (e.g., k-Nearest
-            Neighbor, Logistic Regression, Random Forest, Support Vector Machines, Local Outlier Factor, Isolation
-            Forest, and Robust Covariance Anomaly Detection). Funded by Caltrans.
+            Python program to detect operational but mislabeled traffic sensors using variety of machine learning techniques (e.g., k-Nearest Neighbor, Logistic Regression, Random Forest, Support Vector Machines, Local Outlier Factor, Isolation Forest, and Robust Covariance Anomaly Detection). Funded by Caltrans.
           </p>
         ),
       },
@@ -310,9 +337,7 @@ export const experience: TimelineItem[] = [
         title: 'Bicycle level of service measures for the CA State Highway System',
         content: (
           <p>
-            UX research/human factors study to determine bicycle infrastructure preferences using virtual reality
-            bicycle simulator. Estimated using a Latent Class Choice Model capable of accounting for user heterogeneity.
-            Results to align with “Complete Cities” project. Funded by Caltrans.
+            UX research/human factors study to determine bicycle infrastructure preferences using virtual reality bicycle simulator. Estimated using a Latent Class Choice Model capable of accounting for user heterogeneity. Funded by Caltrans.
           </p>
         ),
       },
@@ -327,8 +352,7 @@ export const experience: TimelineItem[] = [
         title: 'Public Transport Research Group',
         content: (
           <p>
-            Advised team of 19 doctoral students conducting industry partnered research in public transportation
-            engineering, planning, policy analysis, and economics.
+            Advised team of 19 doctoral students conducting industry partnered research in public transportation engineering, planning, policy analysis, and economics.
           </p>
         ),
       },
@@ -343,11 +367,7 @@ export const experience: TimelineItem[] = [
         title: 'Sustainable Travel Incentives with Prediction, Optimization and Personalization',
         content: (
           <p>
-            Data fusion population synthesizer using novel combinatorial optimization algorithm in R and C++
-            (demographics, OD-matrices, household/vehicle association, etc.). Mixed-methods include Bayesian Networks,
-            Markov chain Monte Carlo simulation, iterative fitting (matrix raking), robust regression, LASSO/Ridge
-            regularization, and gradient descent. Used as input in larger agent-based discrete choice and simulation to
-            lower energy consumption with user incentives. Joint MIT project sponsored by ARPA-energy.
+            Generated synthetic population of Boston for activity-based travel simulation model as part of joint MIT/UMass ARPA-e competitive research project. Developed a novel data fusion method to synthesize fixed work location data in population synthesis.
           </p>
         ),
       },
@@ -355,24 +375,42 @@ export const experience: TimelineItem[] = [
         title: 'Infrastructure Strategies for Safer Cycling: An evaluation of driver behavior in a driving simulator',
         content: (
           <p>
-            Utilized a driving simulator to test driver response to novel infrastructure treatments, such as bicycle infrastructure and dynamic signage for the visually impaired. <a href='http://www.ecs.umass.edu/hpl/?_gl=1*1ccbd5e*_ga*MTIxNzE2Mzk0NC4xNjcxNjQxMTk3*_ga_21RLS0L7EB*MTY3NjQxMjg2OC4xLjEuMTY3NjQxMjk2MS4wLjAuMA..&_ga=2.137926008.955228350.1676412868-1217163944.1671641197'><em>The driving simulator</em></a> is a full sized vehicle with its engine removed, fitted with sensors to all user inputs and responses (eye tracking, pedals, steering wheel, shifter, radio, etc.) and surrounded by projector screens for an immersive user experience. Sponsored by the U.S. DOT SaferSim UTC.
+            Conducted human factors research using full-scale immersive driving simulator with eye-tracking and control monitoring (steering, gas, and brake) to study responses to novel roadway infrastructure. Sponsored by the U.S. DOT SaferSim UTC.
           </p>
         ),
       },
       {
         title: 'Bicycle Infrastructure and Safety Research',
         content: (
-          <a>
-          Developed a sinusoidal model for seasonal bicycle demand estimation for calculating bicycle-vehicle crash risk where bicycle traffic data are limited. 
-          </a>
+          <p>
+            Developed a sinusoidal model for seasonal bicycle demand estimation for calculating bicycle-vehicle crash risk where bicycle traffic data are limited. 
+          </p>
         ),
-      }
+      },
     ],
   },
   {
     date: '2014 - 2015',
     location: 'Volpe National Transportation Center',
     title: 'Community Planning Intern',
+    content: [
+      {
+        title: 'Roadside Safety Hardware Approval Process',
+        content: (
+          <p>
+            Evaluated and prepared a report on the approval process of roadside safety hardware for the Federal Highway Administration.
+          </p>
+        ),
+      },
+      {
+        title: 'Data collection & analysis of instrumented vehicle',
+        content: (
+          <p>
+            Collected and analyzed LIDAR and video data from instrumented vehicle to estimate microscopic car-following model parameters.
+          </p>
+        ),
+      },
+    ]
   },
 ];
 
