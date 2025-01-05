@@ -81,12 +81,12 @@ export const heroData: Hero = {
     </>
   ),
   actions: [
-    {
-      href: '/assets/resume.pdf',
-      text: 'Resume',
-      primary: true,
-      Icon: DownloadIcon,
-    },
+    // {
+    //   href: 'https://launchpad.nicholasfournier.com/assets/resume.pdf',
+    //   text: 'Resume',
+    //   primary: true,
+    //   Icon: DownloadIcon,
+    // },
     {
       href: `#${SectionId.Contact}`,
       text: 'Contact',
