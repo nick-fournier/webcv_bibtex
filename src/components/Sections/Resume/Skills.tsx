@@ -21,6 +21,7 @@ SkillGroup.displayName = 'SkillGroup';
 export const Skill: FC<{skill: SkillType}> = memo(({skill}) => {
   const {name, level, max = 10} = skill;
   const percentage = useMemo(() => Math.round((level / max) * 100), [level, max]);
+  percentage;
 
   return (
     <div className="flex flex-col">
