@@ -13,10 +13,11 @@ import {
 
 import GithubIcon from '../components/Icon/GithubIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import heroImage from '../images/header-background.webp';
+import heroImage from '../images/aerial-crop.webp';
 import portfolioBVIImage from '../images/portfolio/bvi_screenshot.png';
 import portfolioCoursesImage from '../images/portfolio/courses_screenshot.png';
 import portfolioOptimizerImage from '../images/portfolio/portfolio_screenshot.png';
+import portfolioTurkeyImage from '../images/portfolio/turkey_screenshot.png';
 // import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
 // import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
 import profilepic from '../images/profilepic.jpg';
@@ -100,7 +101,8 @@ export const heroData: Hero = {
 export const aboutData: About = {
   profileImageSrc: profilepic,
   description: ` 
-  I currently work as a travel modeling consultant, which is a fancy way of saying python software engineer and data scientist for transportation. I develop and implement large-scale simulation models of regional transportation systems.
+  I am currently a data scientist and engineer, working in the transportation space.
+  I have an insatiable curiosity and have no fear taking on projects well outside my domain.
   `,
   aboutItems: [
     {label: 'Location', text: 'San Francisco Bay Area, California', Icon: MapIcon},
@@ -184,12 +186,12 @@ export const portfolioItems: PortfolioItem[] = [
     url: 'https://apps.nicholasfournier.com/bvi-itinerary/',
     image: portfolioBVIImage,
   },
-  // {
-  //   title: 'Parsimobius',
-  //   description: 'A zoneless travel demand model. Uses principles of image compression and multivariate interpolation to utilize pure continuous XY coordinates rather than clunky zones',
-  //   url: 'https://timbaker.me',
-  //   image: porfolioImage10,
-  // },
+  {
+    title: 'Pico Turkey',
+    description: 'A zoneless travel demand model. Uses principles of image compression and multivariate interpolation to utilize pure continuous XY coordinates rather than clunky zones',
+    url: 'https://github.com/nick-fournier/pico-turkey',
+    image: portfolioTurkeyImage,
+  },
   // {
   //   title: 'Speed Cam',
   //   description: 'Me being an annoying neighbor and monitoring local traffic speeds.',
