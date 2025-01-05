@@ -4,7 +4,7 @@
 import {
   AcademicCapIcon,
   // CalendarIcon,
-  DownloadIcon,
+  // DownloadIcon,
   // FlagIcon,
   MapIcon,
   OfficeBuildingIcon,
