@@ -198,24 +198,24 @@ export const portfolioItems: PortfolioItem[] = [
   {
     title: 'Portfolio Optimizer',
     description: 'My personal attempt as creating a stock filter and porfoltio optimizer. ',
-    url: 'https://apps.nicholasfournier.com/portfolio-optimizer',
+    url: 'https://launchpad.nicholasfournier.com/portfolio-optimizer',
     image: portfolioOptimizerImage,
   },
   {
     title: 'Course Maps for South Beach Yacht Club\'s Friday Night Series',
     description: 'I was tired of struggling to read the thrice photocopied directions while on the water',
-    url: 'https://apps.nicholasfournier.com/fns/',
+    url: 'https://launchpad.nicholasfournier.com/fns/',
     image: portfolioCoursesImage,
   },
   {
     title: 'BVI Sailing Itinerary',
     description: 'An interactive sailing itinerary for the British Virgin Islands',
-    url: 'https://apps.nicholasfournier.com/bvi-itinerary/',
+    url: 'https://launchpad.nicholasfournier.com/bvi-itinerary/',
     image: portfolioBVIImage,
   },
   {
     title: 'Pico Turkey',
-    description: 'A zoneless travel demand model. Uses principles of image compression and multivariate interpolation to utilize pure continuous XY coordinates rather than clunky zones',
+    description: 'A Kalman filter and micro-webserver GUI on microcontroller to predict turkey cook time.',
     url: 'https://github.com/nick-fournier/pico-turkey',
     image: portfolioTurkeyImage,
   },
