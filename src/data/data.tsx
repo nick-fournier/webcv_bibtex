@@ -17,6 +17,7 @@ import heroImage from '../images/aerial-crop.webp';
 import portfolioBVIImage from '../images/portfolio/bvi_screenshot.png';
 import portfolioCoursesImage from '../images/portfolio/courses_screenshot.png';
 import portfolioOptimizerImage from '../images/portfolio/portfolio_screenshot.png';
+import portfolioSpeedCubeImage from '../images/portfolio/speedcube_photo.jpg';
 import portfolioTurkeyImage from '../images/portfolio/turkey_screenshot.png';
 // import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
 // import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
@@ -123,11 +124,11 @@ export const skills: SkillGroup[] = [
     name: 'Data Science',
     skills: [
       {
-        name: 'Python, R, Pandas, Polars, DuckDB, data.table',
+        name: 'Python, R, Pandas, Polars, DuckDB, data.table, numpy',
         level: 9,
       },
       {
-        name: 'optimization, econometrics, statistics',
+        name: 'scikit-learn, statsmodels, geneeral optimization and econometrics',
         level: 1,
       },
     ],
@@ -149,7 +150,7 @@ export const skills: SkillGroup[] = [
         level: 9,
       },
       {
-        name: 'Seaborn, Matplotlib, ggplot2',
+        name: 'Seaborn, Matplotlib, ggplot2, Plotly',
         level: 9,
       },
     ],
@@ -219,6 +220,12 @@ export const portfolioItems: PortfolioItem[] = [
     url: 'https://github.com/nick-fournier/pico-turkey',
     image: portfolioTurkeyImage,
   },
+  {
+    title: 'Speed Cube',
+    description: 'A GPS sailboat racing navigation aid displaying Velocity Made Good and tack angle',
+    url: 'https://github.com/nick-fournier/speed-cube',
+    image: portfolioSpeedCubeImage,
+  }
   // {
   //   title: 'Speed Cam',
   //   description: 'Me being an annoying neighbor and monitoring local traffic speeds.',
@@ -287,20 +294,44 @@ export const awards: TimelineItem[] = [
 export const experience: TimelineItem[] = [
   {
     date: '2022 - Present',
-    location: 'Resource Systems Group, inc.',
-    title: 'Data Scientist',
+    location: 'Resource Systems Group, Inc. (RSG)',
+    title: 'Consultant / Data Scientist',
     content: [
       {
-        title: 'Statistical weighting & imputation',
-        content: <p> Refactor of core travel data pipeline (statistical weighting). Reduced project-level of effort from weeks to hours. Eliminated bottleneck with configurable pipeline allowing analyst level staff to operate. Reduced risk by implementing automation, CI/CD testing, linting, and QAQC reporting and validation. </p>,
+        title: 'Standardized statistical weighting pipeline',
+        content: <p>Consolidated one-off scripts into a modular, automated process with QA/QC and CI/CD, reducing bugs and labor, enabling junior staff, and supporting parallel processing for large-scale surveys (e.g., MassDOT, Oregon, Met-Council, NYC DOT, PSRC).</p>,
       },
       {
-        title: 'Routing & map-matching python API',
-        content: <p>Wrote high-performance python API for concurrent requests for self-hosted routing machine (OSRM) for bulk routing and map-matching of GPS traces.</p>,
+        title: 'Novel survey weighting methods',
+        content: <p>Introduced day-of-week weighting and transit ridership targets to improve temporal fidelity and mode-share alignment.</p>,
       },
       {
-        title: 'ActivitySim',
-        content: <p> Contributed core model to open source activity-based travel model <a href='https://activitysim.github.io/'><em>ActivitySim</em></a> for a disaggregated accessibility measure estimator, linking higher level models to lower level choice models.</p>,
+        title: 'Trip linking and tour organization',
+        content: <p>Lead developer of algorithms to prepare household travel survey data for tour-based ABMs, eliminating manual reprocessing.</p>,
+      },
+      {
+        title: 'Joint-trip detection',
+        content: <p>Designed Mahalanobis distance and graph-clique method to identify joint trips, improving linked-trip modeling.</p>,
+      },
+      {
+        title: 'Child trip imputation',
+        content: <p>Built heuristic algorithm to identify underreported child trips in household surveys.</p>,
+      },
+      {
+        title: 'AI-assisted survey programming',
+        content: <p>Managed tool to convert client-facing Word specifications into YAML/JSON, reducing manual effort and time.</p>,
+      },
+      {
+        title: 'Routing and map-matching API',
+        content: <p>Developed Python API for automated GPS trace map-matching and routing on a self-hosted OSRM server.</p>,
+      },
+      {
+        title: 'Geospatial parking zone optimization',
+        content: <p>Created concave-hull-based method to delineate parking zones for city policy development.</p>,
+      },
+      {
+        title: 'ActivitySim: disaggregated accessibility',
+        content: <p>Developed disaggregated accessibility model in the open-source activity-based travel model <a href='https://activitysim.github.io/'><em>ActivitySim</em></a>, linking higher-level models to lower-level choice models.</p>,
       },
     ],
   },
@@ -437,6 +468,11 @@ export const contact: ContactSection = {
       text: 'nick-fournier',
       href: 'https://github.com/nick-fournier',
     },
+    {
+      type: ContactType.Github,
+      text: 'nick-fournier-rsg',
+      href: 'https://github.com/nick-fournier-rsg',
+    }
   ],
 };
 
